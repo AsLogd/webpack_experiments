@@ -6,8 +6,8 @@ Webpack has a default configuration. It will read `src/index.js` as the entry po
 
 To create a custom configuration file, you can name it `webpack.config.js` or specify it via the `--config`  parameter (e.g: `webpack --config webpack.prod.js`).
 
-Config
-------
+Entry and output
+----------------
 
 Webpack has a default configuration which we can override with the config file. This way we could change the name of the entry point:
 ```js
@@ -40,3 +40,9 @@ module.exports = {
 	}
 }
 ```
+
+Examples
+--------
+
+ * **Default**: Execute the script `build_default` to execute webpack with the default configuration. This will read `src/index.js` and output it in `dist/main.js` in production mode (minimized and optimized)
+ * **Custom**: Execute the script `build_custom` to execute webpack with a custom configuration file. This file defines multiple entry points and outputs them in the `custom_dist` folder.

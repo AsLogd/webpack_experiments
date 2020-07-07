@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build_default": "npx webpack",
-    "build_custom": "npx webpack --config webpack.custom.js"
+    "build_custom": "npx webpack --config webpack.custom.js",
+    "clean": "rm -Rf ./custom_dist ./dist"
   },
   "devDependencies": {
     "webpack": "^4.43.0",
