@@ -1,0 +1,8 @@
+html{
+	background:url("./small.jpg");
+}
+
+body {
+	border: thin solid red;
+	background: url("./big.jpg");
+}
