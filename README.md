@@ -1,0 +1,1 @@
+Following https://wanago.io/courses/webpack-4-course/
