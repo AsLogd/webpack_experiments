@@ -7,6 +7,7 @@
     "prebuild": "npx run-p clean",
     "build": "npx run-p build:*",
     "build:example1": "webpack --config webpack.example1.js",
+    "build:example2": "webpack --config webpack.example2.js",
     "clean": "rm -Rf ./dist"
   },
   "devDependencies": {
@@ -17,6 +18,7 @@
     "css-loader": "^3.6.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "npm-run-all": "^4.1.5",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0"
