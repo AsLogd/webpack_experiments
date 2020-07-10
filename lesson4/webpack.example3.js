@@ -2,8 +2,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const path = require('path')
 
-const p_in = "./src/example2/"
-const p_out = "dist/example2/"
+const p_in = "./src/example3/"
+const p_out = "dist/example3/"
 
 
 module.exports = {
@@ -44,6 +44,23 @@ module.exports = {
 		splitChunks: {
 			// All kind of chunks will be selected to optimization
 			chunks: 'all',
+			// This groups may generate more splitting
+			// Each module can pertain to multiple cache groups
+			// Depending on the priority, the module will end in one chunks or the other
+			cacheGroups: {
+				defaultVendors: {
+					test: /[\\/]node_modules[\\/]/,
+					priority: -10,
+					//idHint:"vendors"
+				},
+				default: {
+					minChunks: 2,
+					priority: -20,
+					// If a chunk is already splitted, use it
+					reuseExistingChunk: true,
+					//idHint: "common"
+				}
+			}
 			/* DEFAULT VALUES
 			chunks: 'async',
 			// Select chunks bigger than 30kb (less wouldnt split)

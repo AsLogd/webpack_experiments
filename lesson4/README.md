@@ -36,3 +36,4 @@ Execute script `build` to build all examples.
 
 * **1-entry**: Uses two entries to split the code in two bundles. The html plugin is used two times to handle two html templates. Note that each of two bundles import the module "c", duplicating the js and the css.
 * **2-optimization**: Use the SplitChunksPlugin's `chunks: 'all'` to only generate one "c" bundle. Note that if "c" is small, it may not be split (by default, but can be configured). The generated bundle is called `a~b`
+* **3-cache groups**: Use `cacheGroups` to create a new chunk with the third party code
